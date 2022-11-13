@@ -29,10 +29,10 @@ public class ScoreBoard {
      * @param win true to find consecutive wins and false to find consecutive losses.
      * @param matchCount number/count of consecutive matchs
      * @return Team[] array of team that have n number of consicutive wins/losses
-     * @throws IllegalArgumentException throws when {@param matchCount} is zero
+     * @throws IllegalArgumentException throws when {@param matchCount} is less than or equals to zero
      */
     public Team[] getConsecutiveOutcomes(Boolean win, int matchCount) throws IllegalArgumentException {
-        if (matchCount == 0) {
+        if (matchCount <=0) {
             throw new IllegalArgumentException("Wrong Parameter. matchCount shuld be more than 0");
         }
         List<Team> result = new ArrayList<Team>();
