@@ -1,6 +1,8 @@
 package IPL;
 
-class Team {
+import java.util.Arrays;
+
+public class Team {
     private String name;
     public String getName() {
         return name;
@@ -22,9 +24,13 @@ class Team {
     public void setWins(Boolean[] wins) {
         this.wins = wins;
     }
-    Team(String name, int point, Boolean[] wins) {
+    public Team(String name, int point, Boolean[] wins) {
         this.name = name;
         this.point = point;
         this.wins = wins;
+    }
+
+    public String toString() {
+        return "Name: " + this.name + " Point: " + this.point + " Wins: " + Arrays.toString(wins);
     }
 }
