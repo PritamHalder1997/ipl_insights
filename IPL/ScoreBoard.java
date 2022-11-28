@@ -54,6 +54,18 @@ public class ScoreBoard {
         }
         return result.toArray(new Team[result.size()]);
     }
+    
+    
+    /**
+     * Finds the teams that have n number of consecutive losses.
+     * @param matchCount number/count of consecutive matches
+     * @throws IllegalArgumentException throws when {@param matchCount} is less than or equals to zero
+     */
+    public Team[] getConsecutiveLosses( int matchCount) throws IllegalArgumentException {
+    
+        return getConsecutiveOutcomes(false, 2);
+           
+    }
 
 
     /**
@@ -71,4 +83,7 @@ public class ScoreBoard {
         }
         return totalPoints / teams.length;
     }
+    
+    
+    
 }
